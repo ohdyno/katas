@@ -9,6 +9,7 @@ import org.approvaltests.reporters.UseReporter;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppTest {
     @UseReporter(ClipboardReporter.class)
@@ -22,5 +23,11 @@ class AppTest {
     void appHasAGreetingWithAssertJ() {
         App classUnderTest = new App();
         assertThat(classUnderTest.getGreeting()).isEqualTo("Hello World!");
+    }
+
+    @Test
+    void appHasAGreetingWithJUnitAssert() {
+        App classUnderTest = new App();
+        assertEquals("Hello World!", classUnderTest.getGreeting());
     }
 }
