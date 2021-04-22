@@ -18,7 +18,6 @@ class AppTest {
         Approvals.verify(classUnderTest.getGreeting());
     }
 
-    @UseReporter(ClipboardReporter.class)
     @Test
     void appHasAGreetingWithAssertJ() {
         App classUnderTest = new App();
