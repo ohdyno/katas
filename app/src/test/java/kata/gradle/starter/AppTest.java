@@ -8,11 +8,20 @@ import org.approvaltests.reporters.ClipboardReporter;
 import org.approvaltests.reporters.UseReporter;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class AppTest {
     @UseReporter(ClipboardReporter.class)
     @Test
     void appHasAGreetingWithApprovalTests() {
         App classUnderTest = new App();
         Approvals.verify(classUnderTest.getGreeting());
+    }
+
+    @UseReporter(ClipboardReporter.class)
+    @Test
+    void appHasAGreetingWithAssertJ() {
+        App classUnderTest = new App();
+        assertThat(classUnderTest.getGreeting()).isEqualTo("Hello World!");
     }
 }
