@@ -3,12 +3,16 @@
  */
 package kata.gradle.starter;
 
+import org.approvaltests.Approvals;
+import org.approvaltests.reporters.ClipboardReporter;
+import org.approvaltests.reporters.UseReporter;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
+    @UseReporter(ClipboardReporter.class)
+    @Test
+    void appHasAGreetingWithApprovalTests() {
         App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+        Approvals.verify(classUnderTest.getGreeting());
     }
 }
