@@ -1,5 +1,5 @@
 rootProject.name = "kata-gradle-starter"
-include("app")
+include("template")
 
 dependencyResolutionManagement {
     repositories {

@@ -1,7 +1,7 @@
 package kata.gradle.starter;
 
-public class App {
-    public String getGreeting() {
+public class Kata {
+    public String act() {
         return "Hello World!";
     }
 }
