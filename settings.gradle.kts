@@ -1,5 +1,5 @@
 rootProject.name = "kata-gradle-starter"
-include("template")
+include("template", "arrange-act-assert")
 
 dependencyResolutionManagement {
     repositories {
