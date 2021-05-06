@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+state NewCode {
+    NewCode : Developing code without modifying existing code
+    NewCode --> TestDrivenDevelopment
+    NewCode --> TCR
+
+    state TCR {
+        TCR : Test && Commit || Revert
+
+        state c <<choice>>
+        Test --> c : run all tests
+        c --> Commit : if tests pass
+        c --> Revert : if tests fail
+        Revert --> Test
+        Commit --> Test
+    }
+}
+
+state TestDrivenDevelopment {
+    state Red {
+        Red : Any failing tests (including not compiling)
+        Red --> Green
+    }
+
+    state Green {
+        Green : All tests pass
+        Green --> Refactoring
+    }
+
+    state Refactoring {
+        Refactoring : Change code design without change in behavior
+        Refactoring --> Red
+        Refactoring --> CodeSmells
+    }
+
+    state DeveloperTests {
+        DeveloperTests : Test failures implicate the last change
+    }
+}
+
+state CodeSmells {
+    CodeSmells : Identify code smells
+}
+
+state LegacyCode {
+    LegacyCode --> Refactoring
+    LegacyCode --> CharacterizationTests
+}
+
+state Collaboration {
+    state PairProgramming
+    state MobProgramming
+    state Facilitation
+    state StoryWriting
+    state IncrementalDevelopment
+}
+
+state EmergentDesign
+
+state CICD {
+state ContinuousIntegration
+state ContinuousDeployment
+state ContinuousDelivery
+}
+
+@enduml
