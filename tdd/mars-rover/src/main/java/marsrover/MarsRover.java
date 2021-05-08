@@ -1,4 +1,4 @@
-package kata.tdd.marsrover;
+package marsrover;
 
 public class MarsRover {
 }

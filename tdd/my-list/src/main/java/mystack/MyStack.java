@@ -1,4 +1,4 @@
-package kata.tdd.mystack;
+package mystack;
 
 /**
  * MyStack is a last in, first out (LIFO) data structure that holds generic objects, commonly known as a stack.

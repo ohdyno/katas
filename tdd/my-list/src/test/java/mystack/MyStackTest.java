@@ -1,4 +1,4 @@
-package kata.tdd.mystack;
+package mystack;
 
 public class MyStackTest {
 }
