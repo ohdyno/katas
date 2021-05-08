@@ -1,6 +1,9 @@
 rootProject.name = "kata-gradle-starter"
-include("template", "given-when-then", "test-doubles")
-include(":tdd:mars-rover", ":tdd:my-stack")
+include(":template")
+include(":given-when-then")
+include(":test-doubles")
+include(":tdd:mars-rover")
+include(":tdd:my-stack")
 
 dependencyResolutionManagement {
     repositories {
