@@ -1,4 +1,4 @@
-package kata.gradle.starter;
+package template;
 
 import org.approvaltests.Approvals;
 import org.approvaltests.reporters.ClipboardReporter;

@@ -1,4 +1,4 @@
-package kata.gradle.starter;
+package template;
 
 public class Kata {
     public String act() {

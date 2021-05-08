@@ -1,4 +1,4 @@
-package kata.aaa;
+package given.when.then;
 
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
