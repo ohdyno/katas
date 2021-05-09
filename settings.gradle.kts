@@ -5,6 +5,7 @@ include(":test-doubles")
 include(":tdd:mars-rover")
 include(":tdd:my-stack")
 include(":legacy-code:chart-smart")
+include(":code-smells")
 
 dependencyResolutionManagement {
     repositories {

@@ -11,6 +11,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/code-smells" />
             <option value="$PROJECT_DIR$/given-when-then" />
             <option value="$PROJECT_DIR$/legacy-code" />
             <option value="$PROJECT_DIR$/legacy-code/chart-smart" />
