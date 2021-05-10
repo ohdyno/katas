@@ -2,7 +2,16 @@ plugins {
     java
 }
 
-subprojects {
+configure(
+        listOf(
+                project(":template"),
+                project(":given-when-then"),
+                project(":test-doubles"),
+                project(":tdd:mars-rover"),
+                project(":tdd:my-stack"),
+                project(":legacy-code:chart-smart"),
+        )
+) {
     apply {
         plugin("java")
     }
@@ -18,5 +27,4 @@ subprojects {
     tasks.test {
         useJUnitPlatform()
     }
-
 }
