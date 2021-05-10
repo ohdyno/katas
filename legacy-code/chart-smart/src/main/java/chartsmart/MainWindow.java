@@ -13,6 +13,11 @@ public class MainWindow extends JPanel {
     private JComboBox cboDisplayType;
 
     public MainWindow() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         initializeLayout();
     }
 

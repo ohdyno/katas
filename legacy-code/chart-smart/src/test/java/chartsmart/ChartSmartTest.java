@@ -11,7 +11,7 @@ import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
 @EnabledOnOs(OS.MAC)
-@UseReporter({ClipboardReporter.class, QuietReporter.class})
+@UseReporter(ClipboardReporter.class)
 class ChartSmartTest {
 
   @Test
