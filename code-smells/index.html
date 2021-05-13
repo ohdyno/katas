@@ -46,25 +46,9 @@
       .smell .label.good {
         color: green;
       }
-
-      #autoslide-indicator {
-        height: 25px;
-        width: 25px;
-        background-color: #bbb;
-        border-radius: 50%;
-        position: absolute;
-        top: 96%;
-        left: 1%;
-        display: inline-block;
-      }
-
-      #autoslide-indicator.paused {
-        display: none;
-      }
     </style>
   </head>
   <body>
-    <span id="autoslide-indicator" class="paused"></span>
     <div class="reveal">
       <div class="slides">
         <section>
@@ -4339,38 +4323,12 @@
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
+        autoSlide: 5000,
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       }).then(() => {
-        function toggleAutoslideIndicator(state) {
-          if (state) {
-            document
-              .getElementById("autoslide-indicator")
-              .removeAttribute("class");
-          } else {
-            document
-              .getElementById("autoslide-indicator")
-              .setAttribute("class", "paused");
-          }
-        }
-
-        Reveal.on("autoslidepaused", (event) => {
-          toggleAutoslideIndicator(false);
-        });
-
-        Reveal.on("autoslideresumed", (event) => {
-          toggleAutoslideIndicator(true);
-        });
-
-        Reveal.on("slidechanged", (event) => {
-          if (
-            !Reveal.isAutoSliding() &&
-            !!event.currentSlide.dataset.autoslide
-          ) {
-            toggleAutoslideIndicator(true);
-          }
-        });
+        Reveal.toggleAutoSlide(false);
       });
     </script>
   </body>
