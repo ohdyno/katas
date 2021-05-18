@@ -3,14 +3,16 @@ plugins {
 }
 
 configure(
-        listOf(
-                project(":template"),
-                project(":given-when-then"),
-                project(":test-doubles"),
-                project(":tdd:mars-rover"),
-                project(":tdd:my-stack"),
-                project(":legacy-code:chart-smart"),
-        )
+    listOf(
+        project(":template"),
+        project(":given-when-then"),
+        project(":test-doubles"),
+        project(":tdd:mars-rover"),
+        project(":tdd:my-stack"),
+        project(":legacy-code:chart-smart"),
+        project(":duplication:java-version"),
+        project(":duplication:javascript-version")
+    )
 ) {
     apply {
         plugin("java")

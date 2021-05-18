@@ -6,6 +6,8 @@ include(":tdd:mars-rover")
 include(":tdd:my-stack")
 include(":legacy-code:chart-smart")
 include(":code-smells")
+include(":duplication:java-version")
+include(":duplication:javascript-version")
 
 dependencyResolutionManagement {
     repositories {
