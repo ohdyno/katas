@@ -11,7 +11,6 @@ configure(
         project(":tdd:my-stack"),
         project(":legacy-code:chart-smart"),
         project(":duplication:java-version"),
-        project(":duplication:javascript-version")
     )
 ) {
     apply {

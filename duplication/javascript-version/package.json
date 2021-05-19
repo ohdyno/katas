@@ -1,0 +1,15 @@
+{
+  "name": "code_retreat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "approvals": "^3.0.5",
+    "mocha": "^8.4.0"
+  }
+}
