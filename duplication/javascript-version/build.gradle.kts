@@ -1,5 +1,3 @@
-import com.github.gradle.node.npm.task.NpmTask
-
 plugins {
     id("com.github.node-gradle.node").version("3.0.1")
 }
@@ -9,7 +7,6 @@ node {
     version.set("14.16.0")
 }
 
-tasks.register<NpmTask>("test") {
+tasks.register("build") {
     dependsOn(tasks.npmInstall)
-    npmCommand.set(listOf("run", "test"))
 }

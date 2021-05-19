@@ -13,3 +13,7 @@ task<NpmTask>("present") {
     dependsOn(tasks.npmInstall)
     args.set(listOf("run", "start"))
 }
+
+tasks.register("build") {
+    dependsOn(tasks.npmInstall)
+}
