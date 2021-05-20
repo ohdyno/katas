@@ -9,6 +9,7 @@ include(":legacy-code:ugly-trivia")
 include(":code-smells")
 include(":duplication:java-version")
 include(":duplication:javascript-version")
+include(":tell-dont-ask")
 
 dependencyResolutionManagement {
     repositories {

@@ -12,6 +12,7 @@ configure(
         project(":legacy-code:chart-smart"),
         project(":legacy-code:ugly-trivia"),
         project(":duplication:java-version"),
+        project(":tell-dont-ask"),
     )
 ) {
     apply {
