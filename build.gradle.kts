@@ -10,6 +10,7 @@ configure(
         project(":tdd:mars-rover"),
         project(":tdd:my-stack"),
         project(":legacy-code:chart-smart"),
+        project(":legacy-code:ugly-trivia"),
         project(":duplication:java-version"),
     )
 ) {

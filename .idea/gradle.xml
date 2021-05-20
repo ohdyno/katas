@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/given-when-then" />
             <option value="$PROJECT_DIR$/legacy-code" />
             <option value="$PROJECT_DIR$/legacy-code/chart-smart" />
+            <option value="$PROJECT_DIR$/legacy-code/ugly-trivia" />
             <option value="$PROJECT_DIR$/tdd" />
             <option value="$PROJECT_DIR$/tdd/mars-rover" />
             <option value="$PROJECT_DIR$/tdd/my-stack" />
