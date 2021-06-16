@@ -23,5 +23,7 @@ describe("gol suite", () => {
   });
 
   it("should not ", () => {
+    const gameBoard = new GameBoard(5, 5);
+    expect(gameBoard.isAlive(0, 0)).toBeFalsy()
   });
 });
