@@ -1,22 +1,16 @@
-import {  screen } from '@testing-library/react';
+import { Grid } from "./Grid";
 
-class Grid {
-  constructor(number, number2) {
+/*
+Simplest Testing Situations:
+- Create empty grid
+- Play game with an empty grid
+- Add 1 pixel to empty grid and check if it is alive (before playing)
+- Play game with 1 seed (pixel) alive
+- .....
 
-  }
 
-  isEmpty() {
-    return true;
-  }
+ */
 
-  addSeed(number, number2) {
-
-  }
-
-  isAlive(number, number2) {
-    return true;
-  }
-}
 
 test('should return blank grid', () => {
   const grid = new Grid(5,5);
