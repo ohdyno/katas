@@ -1,6 +1,10 @@
 export class Grid {
-  constructor(number, number2) {
-
+   let board=[];
+  constructor(row, col) {
+   this.board = new Array(row); // create an empty array of length n
+   for (let i = 0; i < row; i++) {
+    this.board[i] = new Array(col); // make each element an array
+   }
   }
 
   isEmpty() {
