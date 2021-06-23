@@ -1,9 +1,13 @@
 package marsrover;
 
+import java.util.Dictionary;
+
 public class MarsRover {
     private Integer posX;
     private Integer posY;
-    private Directions direction;
+//    public Location location;
+//    private Dictionary<String, Integer> location;
+
     private enum Directions
     {
         N{ public Directions Left(){ return Directions.W; } },
@@ -15,22 +19,32 @@ public class MarsRover {
         public Directions Left(){return VALUES[ordinal() - 1];  }
         public Directions Right(){ return VALUES[ordinal() + 1]; }
     }
+    private Directions direction;
 
-    public MarsRover(Integer x, Integer y, char dir){
+    public MarsRover(Integer x, Integer y, char dir, Integer maxX, Integer maxY){
         posX = x;
         posY = y;
 
+
+/*
+        location.x = x;
+        location.y = y;
+        location.maxX = maxX;
+        location.maxY = maxY;
+*/
+
+
         switch (dir) {
-            case 'n' | 'N':
+            case 'N':
                 direction = Directions.N;
                 break;
-            case 'e' | 'E':
+            case 'E':
                 direction = Directions.E;
                 break;
-            case 's' | 'S':
+            case 'S':
                 direction = Directions.S;
                 break;
-            case 'w' | 'W':
+            case 'W':
                 direction = Directions.W;
                 break;
             default:
@@ -40,13 +54,13 @@ public class MarsRover {
 
     public void runCommand(char command){
         switch (command){
-            case 'l' | 'L':
+            case 'L':
                 turnLeft();
                 break;
-            case 'r' | 'R':
+            case 'R':
                 turnRight();
                 break;
-            case 'm' | 'M':
+            case 'M':
                 move();
                 break;
             default:
