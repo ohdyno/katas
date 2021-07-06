@@ -5,7 +5,7 @@ import java.util.Dictionary;
 public class MarsRover {
     private Integer posX;
     private Integer posY;
-//    public Location location;
+    public Location location = new Location();
 //    private Dictionary<String, Integer> location;
 
     private enum Directions
@@ -26,12 +26,12 @@ public class MarsRover {
         posY = y;
 
 
-/*
+
         location.x = x;
         location.y = y;
         location.maxX = maxX;
         location.maxY = maxY;
-*/
+
 
 
         switch (dir) {
