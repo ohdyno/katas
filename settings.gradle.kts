@@ -11,6 +11,7 @@ include(":duplication:java-version")
 include(":duplication:javascript-version")
 include(":tell-dont-ask")
 include(":learn-ngxs")
+include(":rps")
 
 dependencyResolutionManagement {
     repositories {
