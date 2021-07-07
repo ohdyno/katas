@@ -6,9 +6,6 @@ describe("player 1 win scenarios", () => {
   test("scissors vs paper", () => {
     expect(rps("scissors", "paper")).toEqual("player 1 wins");
   });
-  test("scissors vs paper", () => {
-    expect(rps("scissors", "paper")).toEqual("player 1 wins");
-  });
 });
 
 describe("player 2 win scenarios", () => {
