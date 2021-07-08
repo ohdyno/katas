@@ -31,27 +31,68 @@ describe("in observer pattern", () => {
 
   describe("player 1 win scenarios", () => {
     test("rock vs scissors", () => {
-      observerRps("rock", "scissors", uiSpy)
+      observerRps("rock", "scissors", uiSpy);
       expect(uiSpy.playerOneWins).toHaveBeenCalled();
       expect(uiSpy.playerTwoWins).not.toHaveBeenCalled();
     });
     test("scissors vs paper", () => {
-      observerRps("scissors", "paper", uiSpy)
+      observerRps("scissors", "paper", uiSpy);
       expect(uiSpy.playerOneWins).toHaveBeenCalled();
       expect(uiSpy.playerTwoWins).not.toHaveBeenCalled();
     });
   });
   describe("player 2 win scenarios", () => {
     test("scissors vs rock", () => {
-      observerRps("scissors", "rock", uiSpy)
+      observerRps("scissors", "rock", uiSpy);
       expect(uiSpy.playerTwoWins).toHaveBeenCalled();
       expect(uiSpy.playerOneWins).not.toHaveBeenCalled();
     });
     test("rock vs paper", () => {
-      observerRps("rock", "paper", uiSpy)
+      observerRps("rock", "paper", uiSpy);
       expect(uiSpy.playerTwoWins).toHaveBeenCalled();
       expect(uiSpy.playerOneWins).not.toHaveBeenCalled();
     });
   });
 });
 
+function capitalizeFromRequestResponse() {
+  let bar = requestResponseRps("rock", "scissors");
+  if (bar === "player 1 wins") {
+    console.log("PLAYER ONE HAS WON");
+  } else {
+    console.log("PLAYER TWO HAS WON");
+  }
+}
+
+function lowercaseFromRequestResponse() {
+  let bar = requestResponseRps("rock", "scissors");
+  if (bar === "player 1 wins") {
+    console.log("player one has won");
+  } else {
+    console.log("player two has won");
+  }
+}
+
+function capitalizeFromObserver() {
+  let ui = {
+    playerOneWins: () => {
+      console.log("PLAYER ONE HAS WON");
+    },
+    playerTwoWins: () => {
+      console.log("PLAYER TWO HAS WON");
+    }
+  };
+  observerRps("rock", "scissors", ui);
+}
+
+function lowercaseFromObserver() {
+  let ui = {
+    playerOneWins: () => {
+      console.log("player one has won");
+    },
+    playerTwoWins: () => {
+      console.log("player two has won");
+    }
+  };
+  observerRps("rock", "scissors", ui);
+}
