@@ -1,6 +1,6 @@
 const { rps } = require("./rps");
 
-describe("in observer pattern", () => {
+describe("rock paper scissors", () => {
   let uiSpy;
 
   beforeEach(() => {
