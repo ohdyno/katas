@@ -2,7 +2,7 @@
   "name": "rps",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "rps.js",
   "scripts": {
     "test": "jest --watch"
   },
