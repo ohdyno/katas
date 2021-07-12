@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App(props) {
@@ -6,9 +5,13 @@ function App(props) {
   let ui = {
     playerOneWins() {
       winner = "player 1 wins";
+    },
+
+    playerTwoWins() {
+      winner = "player 2 wins";
     }
   };
-  props.rps("rock","scissors",ui);
+  props.rps("rock", "scissors", ui);
   return (
     <div className="App">
       <div>
