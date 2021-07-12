@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App(props) {
-  let winner;
+  let winner = '';
   let ui = {
     playerOneWins() {
       winner = "player 1 wins";
@@ -11,9 +11,19 @@ function App(props) {
       winner = "player 2 wins";
     }
   };
-  props.rps("rock", "scissors", ui);
+
+  let playerOneChoice = "";
+  let playerTwoChoice = "";
+
+  function playRps() {
+    props.rps(playerOneChoice, playerTwoChoice, ui);
+  }
+
   return (
     <div className="App">
+      <input value={playerOneChoice} data-testid={"playerOne"} />
+      <input value={playerTwoChoice} data-testid={"playerTwo"} />
+      <button data-testid={"play"} onClick={playRps} />
       <div>
         {winner}
       </div>
