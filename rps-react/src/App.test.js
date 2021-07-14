@@ -27,12 +27,23 @@ it("given the user filled in 'rock' for player one and 'scissors' for player two
   "when the user clicks 'play'," +
   "then the user sees 'player 1 wins'", () => {
   render(<App rps={rps} />);
-
   userEvent.type(screen.getByLabelText(/player one choice/i), "rock");
   userEvent.type(screen.getByLabelText(/player two choice/i), "scissors");
-
   userEvent.click(screen.getByText(/play round/i));
 
   const winnerText = screen.getByText(/player 1 wins/i);
   expect(winnerText).toBeInTheDocument();
+});
+
+it("spec name", () => {
+  //given component renders
+  const rpsFunc = jest.fn();
+  render(<App rps={rpsFunc} />);
+  //when input is filled in as p1 rock p2 scissors
+  userEvent.type(screen.getByLabelText(/player one choice/i), "rock");
+  userEvent.type(screen.getByLabelText(/player two choice/i), "scissors");
+  userEvent.click(screen.getByText(/play round/i));
+  //then we expect that winner is equal to player 1 wins
+
+  expect(rpsFunc).toBeCalledWith("rock","scissors", expect.anything());
 });
