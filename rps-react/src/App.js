@@ -10,11 +10,19 @@ function App(props) {
 
     playerTwoWins() {
       setWinner("player 2 wins");
+    },
+
+    tie() {
+      setWinner("Tie");
     }
   };
 
   const [playerOneChoice, setPlayerOneChoice] = useState("");
   const [playerTwoChoice, setPlayerTwoChoice] = useState("");
+
+  function setTie(tie) {
+
+  }
 
   function playRps() {
     props.rps(playerOneChoice, playerTwoChoice, ui);
@@ -32,6 +40,7 @@ function App(props) {
     <div className="App">
       <label htmlFor={"playerOne"}>Player One Choice</label>
       <input id={"playerOne"} value={playerOneChoice} onChange={updatePlayerOneChoice} data-testid={"playerOne"} />
+
       <label htmlFor={"playerTwo"}>Player Two Choice</label>
       <input id={"playerTwo"} value={playerTwoChoice} onChange={updatePlayerTwoChoice} data-testid={"playerTwo"} />
       <button data-testid={"play"} onClick={playRps}>Play Round</button>

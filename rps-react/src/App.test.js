@@ -47,3 +47,20 @@ it("spec name", () => {
 
   expect(rpsFunc).toBeCalledWith("rock","scissors", expect.anything());
 });
+
+it("should display tie when rps retuen result as tie", () => {
+  const rpsStub = (player1, player2, ui) => {
+    ui.tie();
+  };
+  // given rps return tie
+
+  // when render UI
+  render(<App rps={rpsStub} />);
+  userEvent.type(screen.getByLabelText(/player one choice/i), "rock");
+  userEvent.type(screen.getByLabelText(/player two choice/i), "scissors");
+  userEvent.click(screen.getByText(/play round/i));
+  // then display tie
+  const winnerText = screen.getByText(/tie/i);
+  expect(winnerText).toBeInTheDocument();
+});
+
