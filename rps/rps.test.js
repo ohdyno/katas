@@ -40,7 +40,13 @@ describe("rock paper scissors", () => {
       expect(uiSpy.playersAreTied).toHaveBeenCalled();
       expect(uiSpy.playerOneWins).not.toHaveBeenCalled();
       expect(uiSpy.playerTwoWins).not.toHaveBeenCalled();
+    });
 
+    it("spec name", () => {
+      rps("paper", "rock", uiSpy)
+      expect(uiSpy.playerTwoWins).not.toHaveBeenCalled();
+      expect(uiSpy.playerOneWins).toHaveBeenCalled();
+      expect(uiSpy.playersAreTied).not.toHaveBeenCalled();
     });
   });
 });
