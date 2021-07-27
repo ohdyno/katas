@@ -14,11 +14,11 @@ import org.junit.jupiter.api.condition.OS;
 @UseReporter(ClipboardReporter.class)
 class ChartSmartTest {
 
-  @Test
-  void testMainWindow() {
-    MainWindow chartSmart = new MainWindow();
-    AwtApprovals.verify(chartSmart);
-  }
+//  @Test
+//  void testMainWindow() {
+//    MainWindow chartSmart = new MainWindow();
+//    AwtApprovals.verify(chartSmart);
+//  }
 
   @Test
   void testBarChartWindow() {
