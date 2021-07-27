@@ -9,11 +9,10 @@ function playerOneOrTwoWins(player1, player2, ui) {
 module.exports = {
   rps: function(player1, player2, ui) {
     if (player1 === player2) {
-      ui.playersAreTied();
+      ui.tie();
     } else {
       playerOneOrTwoWins(player1, player2, ui);
     }
   }
-
 };
 

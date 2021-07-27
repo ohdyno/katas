@@ -7,7 +7,7 @@ describe("rock paper scissors", () => {
     uiSpy = {
       playerOneWins: jest.fn(),
       playerTwoWins: jest.fn(),
-      playersAreTied: jest.fn()
+      tie: jest.fn()
     };
   });
 
@@ -37,7 +37,7 @@ describe("rock paper scissors", () => {
 
     it("players are tied", () => {
       rps("rock","rock", uiSpy)
-      expect(uiSpy.playersAreTied).toHaveBeenCalled();
+      expect(uiSpy.tie).toHaveBeenCalled();
       expect(uiSpy.playerOneWins).not.toHaveBeenCalled();
       expect(uiSpy.playerTwoWins).not.toHaveBeenCalled();
     });
@@ -46,7 +46,7 @@ describe("rock paper scissors", () => {
       rps("paper", "rock", uiSpy)
       expect(uiSpy.playerTwoWins).not.toHaveBeenCalled();
       expect(uiSpy.playerOneWins).toHaveBeenCalled();
-      expect(uiSpy.playersAreTied).not.toHaveBeenCalled();
+      expect(uiSpy.tie).not.toHaveBeenCalled();
     });
   });
 });
