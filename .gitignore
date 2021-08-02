@@ -7,3 +7,5 @@ build
 # Received files from Approval Tests
 *.received.*
 **/node_modules
+
+.idea/*
