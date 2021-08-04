@@ -3,10 +3,7 @@ package com.example.springboot_helloworld.controllers;
 import com.example.springboot_helloworld.models.Name;
 import com.example.springboot_helloworld.repositories.Customers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class DatabaseController {
@@ -20,7 +17,7 @@ public class DatabaseController {
     }
 
     @GetMapping("/getMuhammed")
-    public Name getMuhammed() {
-        return customers.getMuhammedFromDatabase();
+    public Name getMuhammed(@RequestParam String name) {
+        return customers.getMuhammedFromDatabase(name);
     }
 }
