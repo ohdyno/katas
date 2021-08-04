@@ -1,0 +1,3 @@
+2021-08-04 09:48:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CUSTOMERS WHERE NAME EQUALS[*] 'Muhammed'"; SQL statement:
+select * from CUSTOMERS where Name equals 'Muhammed' [42000-200]
