@@ -28,4 +28,11 @@ public class DatabaseControllerTests {
                 .andExpect(status().isOk())
                 .andExpect(content().json(String.valueOf(json)));
     }
+
+    @Test
+    public void getTestBar() throws Exception {
+        JSONObject json = new JSONObject();
+        json.put("name", "Zach");
+        mockMvc.perform(get("/getCustomerByName?name=Zach")).andExpect(content().json(String.valueOf(json)));
+    }
 }

@@ -16,8 +16,8 @@ public class DatabaseController {
         return name;
     }
 
-    @GetMapping("/getMuhammed")
-    public Name getMuhammed(@RequestParam String name) {
-        return customers.getMuhammedFromDatabase(name);
+    @GetMapping("/getCustomerByName")
+    public Name getCustomerByName(@RequestParam String name) {
+        return customers.getCustomerFromDatabase(name);
     }
 }
