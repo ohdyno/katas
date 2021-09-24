@@ -26,10 +26,6 @@
       <option name="SPACE_WITHIN_TYPE_ASSERTION" value="true" />
       <option name="BLACKLIST_IMPORTS" value="rxjs/Rx" />
     </TypeScriptCodeStyleSettings>
-    <VueCodeStyleSettings>
-      <option name="INTERPOLATION_NEW_LINE_AFTER_START_DELIMITER" value="false" />
-      <option name="INTERPOLATION_NEW_LINE_BEFORE_END_DELIMITER" value="false" />
-    </VueCodeStyleSettings>
     <codeStyleSettings language="HTML">
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
