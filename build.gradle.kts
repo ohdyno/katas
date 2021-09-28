@@ -10,6 +10,7 @@ configure(
         project(":tdd:mars-rover"),
         project(":tdd:my-stack"),
         project(":tdd:social-network"),
+        project(":tdd:fizz-buzz"),
         project(":legacy-code:chart-smart"),
         project(":legacy-code:ugly-trivia"),
         project(":duplication:java-version"),
