@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="gradle:latest" type="docker">
+        <config>
+          <option name="targetPlatform">
+            <TargetPlatform />
+          </option>
+          <option name="buildNotPull" value="false" />
+          <option name="pullImageConfig">
+            <PullImageConfig>
+              <option name="tagToPull" value="gradle:latest" />
+            </PullImageConfig>
+          </option>
+        </config>
+        <ContributedStateBase type="GradleRuntime">
+          <config />
+        </ContributedStateBase>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="$PROJECT_DIR$/../.asdf/installs/java/adoptopenjdk-11.0.9+11" />
+          </config>
+        </ContributedStateBase>
+      </target>
+      <target name="adoptopenjdk:latest" type="docker">
+        <config>
+          <option name="targetPlatform">
+            <TargetPlatform />
+          </option>
+          <option name="buildNotPull" value="false" />
+          <option name="pullImageConfig">
+            <PullImageConfig>
+              <option name="tagToPull" value="adoptopenjdk:latest" />
+            </PullImageConfig>
+          </option>
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="agentFolder">
+              <VolumeState>
+                <option name="targetSpecificBits">
+                  <map>
+                    <entry key="mountAsVolume" value="false" />
+                  </map>
+                </option>
+              </VolumeState>
+            </option>
+            <option name="classpathFolder">
+              <VolumeState>
+                <option name="targetSpecificBits">
+                  <map>
+                    <entry key="mountAsVolume" value="false" />
+                  </map>
+                </option>
+              </VolumeState>
+            </option>
+            <option name="homePath" value="/opt/java/openjdk" />
+            <option name="javaVersionString" value="16.0.1" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>
