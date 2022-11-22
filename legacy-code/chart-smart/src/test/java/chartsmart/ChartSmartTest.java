@@ -4,17 +4,14 @@ import org.approvaltests.reporters.ClipboardReporter;
 import org.approvaltests.reporters.UseReporter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledOnOs;
-import org.junit.jupiter.api.condition.OS;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@EnabledOnOs(OS.MAC)
 @UseReporter(ClipboardReporter.class)
 class ChartSmartTest {
     @BeforeEach
     void setUp() {
-
+        System.setProperty("java.awt.headless", "true");
     }
 
     @Test
