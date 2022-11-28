@@ -1,4 +1,4 @@
-rootProject.name = "kata-gradle-starter"
+rootProject.name = "katas"
 include(":template")
 include(":given-when-then")
 include(":test-doubles")
